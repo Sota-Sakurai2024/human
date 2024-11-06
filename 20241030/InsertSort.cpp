@@ -39,5 +39,7 @@ int main()
         cout << human[i] << endl;
     }
 
+    //挿入ソートの関数を実行する
+    InsertSort(human, sizeof(human));
     return 0;
 }
