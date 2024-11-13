@@ -65,10 +65,7 @@ $RECYCLE.BIN/
 
 Academy.txt
 
-HelloWorld.exe
-TaskA.exe
+*.exe
 
 tasks.json
 settings.json
-
-InsertSort.exe
