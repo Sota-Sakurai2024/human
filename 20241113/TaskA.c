@@ -46,5 +46,6 @@ int main()
         printf("%d回目:%d\n", i,data[i]);
     }
 
+    LinearSearch(data, ARRAY_SIZE);
     return 0;
 }
