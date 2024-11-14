@@ -42,7 +42,6 @@ int main()
     for (int i = 0; i < ARRAY_SIZE; i++)
     {
         data[i] = i;
-        printf("%d", data[i]);
     }
 
     //data配列をシャッフルする
