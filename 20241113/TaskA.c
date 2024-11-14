@@ -47,5 +47,8 @@ int main()
     }
 
     LinearSearch(data, ARRAY_SIZE);
+
+    printf("targetのインデックスは%dです", result);
+
     return 0;
 }
