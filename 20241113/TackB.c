@@ -35,5 +35,7 @@ int main()
         data[i] = rand();
         printf("%d番目:%d\n", i, data[i]);
     }
+
+    AscendingOrder(data, ARRAY_SIZE);
     return 0;
 }
