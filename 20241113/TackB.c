@@ -37,5 +37,11 @@ int main()
     }
 
     AscendingOrder(data, ARRAY_SIZE);
+
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        printf("%d番目:%d\n", i, data[i]);
+    }
+
     return 0;
 }
