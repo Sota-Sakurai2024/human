@@ -4,6 +4,9 @@
 
 #define ARRAY_SIZE  11
 
+    int result = -1;
+    int target = 5;
+
 void shuffle(int array[], int size)
 {
     srand(time(NULL));
@@ -13,6 +16,17 @@ void shuffle(int array[], int size)
         int tmp = array[i];
         array[i] = array[j];
         array[j] = tmp;
+    }
+}
+
+void LinearSearch(int array[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if (target == array[i])
+        {
+            result = i;
+        }
     }
 }
 
