@@ -4,6 +4,10 @@
 
 #define ARRAY_SIZE  100
 
+int target = 20;
+int result = -1;
+
+
 //値を入れ替える関数
 void AscendingOrder(int array[], int size)
 {
@@ -27,6 +31,32 @@ void AscendingOrder(int array[], int size)
         }
     }
 }
+
+void BinarySearch(int array[])
+{
+    int left = 0;
+    int rigth = ARRAY_SIZE - 1;
+
+    while (left < rigth)
+    {
+        int mid = (left + rigth) / 2;
+        printf("真ん中%d\n", mid);
+        if (array[mid] == target)
+        {
+            result = mid;
+            break;
+        }
+        else if (array[mid] < target)
+        {
+            left = mid + 1;
+        }
+        else
+        {
+            rigth = mid;
+        }
+    }
+}
+
 int main()
 {
     int data[ARRAY_SIZE];
@@ -43,5 +73,20 @@ int main()
     {
         printf("%d番目;%d\n", i, data[i]);
     }
+
+    BinarySearch(data);
+
+    //リザルトが0以上なのかの確認
+    if (result >= 0)
+    {
+        //0以上なら発見した
+        printf("targetのインデックスは%dです", result);
+    }
+    else
+    {
+        //0未満の場合は発見できなかった
+        printf("targetは見つかりませんでした\n");
+    }
+
     return 0;
 }
