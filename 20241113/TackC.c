@@ -7,7 +7,6 @@
 int target = 20;
 int result = -1;
 
-
 //値を入れ替える関数
 void AscendingOrder(int array[], int size)
 {
