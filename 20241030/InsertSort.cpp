@@ -14,7 +14,7 @@ void swapChar(char *lhs, char *rhs)
 }
 
 //挿入ソートの関数
-void InsertSort(char character[], int size)
+void insertSort(char character[], int size)
 {
     int index;
     
@@ -38,12 +38,14 @@ int main()
 
     for (int i = 0; i < sizeof(human); i++)
     {
-        cout << human[i] << endl;
+        cout << human[i];
     }
+    cout << endl;
 
-    cout << "\n";
+    cout << "" << endl;
+
     //挿入ソートの関数を実行する
-    InsertSort(human, sizeof(human));
+    insertSort(human, sizeof(human));
     
     for (int i = 0; i < sizeof(human); i++)
     {
