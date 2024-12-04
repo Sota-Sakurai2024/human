@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ARRAY_SIZE  11
+struct Define
+{
+    static const int ARRAY_SIZE = 11;
+    static const int TARGET = 5;
+};
 
-    int result = -1;
-    int target = 5;
+int result = -1;
 
 //データの中身をシャッフルする関数
 void shuffle(int array[], int size)
@@ -23,12 +26,12 @@ void shuffle(int array[], int size)
 }
 
 //バイナリサーチ関数
-void LinearSearch(int array[], int size)
+void linearSearch(int array[], int size)
 {
     for (int i = 0; i < size; i++)
     {
         //targetと一致していればresultに格納する
-        if (target == array[i])
+        if (array[i] == Define::TARGET)
         {
             result = i;
         }
@@ -37,23 +40,23 @@ void LinearSearch(int array[], int size)
 
 int main()
 {
-    int data[ARRAY_SIZE];
+    int data[Define::ARRAY_SIZE];
     //0から10までをdata配列に格納
-    for (int i = 0; i < ARRAY_SIZE; i++)
+    for (int i = 0; i < Define::ARRAY_SIZE; i++)
     {
         data[i] = i;
     }
 
     //data配列をシャッフルする
-    shuffle(data, ARRAY_SIZE);
+    shuffle(data, Define::ARRAY_SIZE);
 
-    for (int i = 0; i < ARRAY_SIZE; i++)
+    for (int i = 0; i < Define::ARRAY_SIZE; i++)
     {
         printf("%d回目:%d\n", i,data[i]);
     }
 
     //バイナリサーチを実行する
-    LinearSearch(data, ARRAY_SIZE);
+    linearSearch(data, Define::ARRAY_SIZE);
 
     //探している値のインデックスを出力
     printf("targetのインデックスは%dです", result);
