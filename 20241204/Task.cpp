@@ -68,9 +68,15 @@ bool depthFirstSearch()
         {
             Position nextPos = { currentPos.x + itr->x, currentPos.y + itr->y };
             //現在の座標が0またはその地点が0なら探索しない
-            if (nextPos.x < 0 || nextPos.y < 0 || map[nextPos.x][nextPos.y] == 0)
+            if (nextPos.x < 0 || nextPos.x >= Define::MAP_SIZE || nextPos.y < 0 || nextPos.y >= Define::MAP_SIZE)
             {
                 cout << "探索できない" << endl;
+                continue;
+            }
+            if (map[nextPos.x][nextPos.y] == 0)
+            {
+                cout << "壁 x " << nextPos.x << "壁 y" << nextPos.y;
+                cout << "\n";
                 continue;
             }
             //探索済みでなければstackに追加する
