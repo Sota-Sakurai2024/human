@@ -5,8 +5,8 @@ using namespace std;
 
 struct Position
 {
-    int y;
     int x;
+    int y;
 };
 
 struct Define
